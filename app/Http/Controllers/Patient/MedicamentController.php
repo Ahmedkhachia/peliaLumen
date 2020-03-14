@@ -21,10 +21,10 @@ class MedicamentController extends BaseController
     }
     //////////////////Get Informations of médicaments
 
-    public function index($id){
+    public function index(){
         $User = new User();
         $User_medicament = new Medicament();
-        $medicament = $User_medicament->get_medicament($id);
+        $medicament = $User_medicament->get_medicament(Auth::user()->id);
         return response()->json($medicament, 200);
     }
 
