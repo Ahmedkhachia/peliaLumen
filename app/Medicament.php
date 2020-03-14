@@ -158,7 +158,7 @@ class Medicament extends Model
                 $key->setAttribute("observance" ,$data[0]);
             }    
         }
-        return $MedicPatient[0];
+        return $MedicPatient;
 
 }
 }

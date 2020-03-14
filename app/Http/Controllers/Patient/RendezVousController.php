@@ -22,9 +22,9 @@ class RendezVousController extends BaseController
         // $this->middleware('isActive');
     }
     
-    public function index($id){
+    public function index(){
         $get = new Rendez_vous;
-        $getRendezVous = $get->index($id);
+        $getRendezVous = $get->index(Auth::user()->id);
         return response()->json($getRendezVous, 200);
     }
 

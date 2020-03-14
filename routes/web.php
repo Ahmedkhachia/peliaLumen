@@ -22,7 +22,7 @@ use Illuminate\Http\Request;
     Route::get('profil', 'Patient\ProfilPatientController@index');
 
     //Routes of Medicament
-    Route::get("medicament/{id}", "Patient\MedicamentController@index");
+    Route::get("medicament", "Patient\MedicamentController@index");
     Route::post("medicament", "Patient\MedicamentController@store");
     Route::get("medicament/edit/{id}", "Patient\MedicamentController@edit");
     Route::put("medicament/{id}", "Patient\MedicamentController@update");
@@ -86,7 +86,7 @@ use Illuminate\Http\Request;
     Route::get('/callback/facebook', 'SocialAuthFacebookController@callback');
 
     //Routes of Rendez-vous
-    // Route::get("rendez-vous/{id}", "Patient\RendezVousController@index");
+    Route::get("rendez-vous", "Patient\RendezVousController@index");
     Route::post("rendez-vous", "Patient\RendezVousController@store");
     Route::get("rendez-vous/edit", "Patient\RendezVousController@edit");
     Route::put("rendez-vous/{id}", "Patient\RendezVousController@update");
